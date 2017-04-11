@@ -12,14 +12,22 @@ How can you use the staging area to make sure you have one commit per logical ch
 
 A: We can add only the relevant files into the staging area per check-in to make sure only to cover one logical change.
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A: It makes sense to make branches if I am working on new features but still want to have a stable release of the code handy. The new feature can be worked upon in a branch and merged back to the master later on.
 
 How do the diagrams help you visualize the branch structure?
+
+A: Command for visualization:
+	$git log --graph --oneline <branch_1> <branch_2> <branch_3>
+ Each git commit retains a link to its previous commit. That way, a git tree can be traversed.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
-What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+A: After merging, the change in either branch gets incorporated in a single Master branch.
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
 
+A: While doing manual merge, all the changes done to a branch has to be identified and incorporated into another (Master) branch. This can be time consuming and cause errors. Git does all that automatically by its '$ git merge' command and informs the user in case there is a contention.
