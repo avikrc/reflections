@@ -1,0 +1,33 @@
+What happens when you initialize a repository? Why do you need to do it?
+A: A .git file is created in the current path. A repository can be initialized by $git init command. A git repository needs to be created in order to check in the files I am working on.
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+A: We can add files to the staging area before commiting them on to the repository. The idea is to commit the changes for a single logical change at a time so the addition of files to the staging area allows the inclusion of multiple files before commiting.
+Command to add files to Staging Area is:
+$ git add <filename>
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+A: We can add only the relevant files into the staging area per check-in to make sure only to cover one logical change.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A: It makes sense to make branches if I am working on new features but still want to have a stable release of the code handy. The new feature can be worked upon in a branch and merged back to the master later on.
+
+How do the diagrams help you visualize the branch structure?
+
+A: Command for visualization:
+	$git log --graph --oneline <branch_1> <branch_2> <branch_3>
+ Each git commit retains a link to its previous commit. That way, a git tree can be traversed.
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+A: After merging, the change in either branch gets incorporated in a single Master branch.
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?
+
+A: While doing manual merge, all the changes done to a branch has to be identified and incorporated into another (Master) branch. This can be time consuming and cause errors. Git does all that automatically by its '$ git merge' command and informs the user in case there is a contention.
